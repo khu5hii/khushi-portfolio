@@ -1,25 +1,33 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #141414;
-  --background-secondary: #1A1A1A;
+/* ---------- Theme ---------- */
 
-  --primary: #7F49B4;
-  --primary-hover: #9460C8;
+@theme {
+  /* Colors */
+  --color-background: #141414;
+  --color-surface: #1a1a1a;
 
-  --text-primary: #F5F5F5;
-  --text-secondary: #CFCFCF;
+  --color-primary: #7f49b4;
+  --color-primary-hover: #9460c8;
 
-  --border: rgba(255, 255, 255, 0.08);
+  --color-foreground: #f5f5f5;
+  --color-text-secondary: #cfcfcf;
+
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 }
+
+/* ---------- Fonts ---------- */
 
 html {
   font-family: var(--font-nunito);
-}
-
-body {
-  background: var(--background);
-  color: var(--text-primary);
 }
 
 code,
@@ -27,12 +35,25 @@ pre {
   font-family: var(--font-geist-mono);
 }
 
-/* Tailwind v4 colors */
-@theme {
-  --color-primary: #7F49B4;
-  --color-primary-hover: #9460C8;
-  --color-background: #141414;
-  --color-background-secondary: #1A1A1A;
-  --color-text-primary: #F5F5F5;
-  --color-text-secondary: #CFCFCF;
+/* ---------- Base ---------- */
+
+@layer base {
+  * {
+    border-color: theme(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: theme(--color-background);
+    color: theme(--color-foreground);
+    min-height: 100vh;
+  }
+
+  ::selection {
+    background: theme(--color-primary);
+    color: white;
+  }
 }
