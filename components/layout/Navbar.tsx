@@ -2,6 +2,8 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { Cedarville_Cursive } from "next/font/google";
+import About from "@/components/sections/About";
+import Hero from "@/components/sections/Hero";
 
 const cedarville = Cedarville_Cursive({
   subsets: ["latin"],
@@ -21,11 +23,11 @@ export default function Navbar() {
         </Link>
 
         <div className="hidden items-center gap-8 text-sm font-semibold md:flex">
-          <Link href="/" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#hero" className="text-text-secondary transition-colors hover:text-primary-hover">
             Home
           </Link>
 
-          <Link href="/about" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#about" className="text-text-secondary transition-colors hover:text-primary-hover">
             About
           </Link>
 
