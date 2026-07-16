@@ -111,7 +111,7 @@ export default function Skills() {
           <h2 className="whitespace-nowrap text-4xl font-extrabold text-foreground">
             / skills
           </h2>
-          <div className="h-px max-w-80 flex-1 bg-border" />
+          <div className="h-px flex-1 bg-border" />
         </div>
 
         <motion.div

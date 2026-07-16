@@ -11,7 +11,7 @@ export default function Contact() {
             / contact
           </h2>
 
-          <div className="h-px max-w-60 flex-1 bg-border" />
+          <div className="h-px flex-1 bg-border" />
         </div>
 
         <div className="mt-5 flex flex-wrap items-baseline justify-between gap-4">

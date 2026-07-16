@@ -6,7 +6,7 @@ export default function About() {
           / about me
         </h2>
 
-        <div className="h-px flex-1 max-w-60 bg-border" />
+        <div className="h-px flex-1 bg-border" />
       </div>
 
       <div className="flex mt-5 justify-between gap-20">
