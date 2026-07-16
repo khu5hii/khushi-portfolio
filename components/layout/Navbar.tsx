@@ -31,19 +31,19 @@ export default function Navbar() {
             About
           </Link>
 
-          <Link href="/skills" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#skills" className="text-text-secondary transition-colors hover:text-primary-hover">
             Skills
           </Link>
 
-          <Link href="/projects" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#projects" className="text-text-secondary transition-colors hover:text-primary-hover">
             Projects
           </Link>
 
-          <Link href="/experience" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#experience" className="text-text-secondary transition-colors hover:text-primary-hover">
             Experience
           </Link>
 
-          <Link href="/contact" className="text-text-secondary transition-colors hover:text-primary-hover">
+          <Link href="#contact" className="text-text-secondary transition-colors hover:text-primary-hover">
             Contact
           </Link>
         </div>
