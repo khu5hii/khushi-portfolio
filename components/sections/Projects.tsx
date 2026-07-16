@@ -92,7 +92,7 @@ function ArrowIcon({ className = "h-4 w-4" }: { className?: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-5xl px-8 py-10 mt-20">
+    <section id="projects" className="mx-auto max-w-5xl px-8 py-10 mt-40">
       <div className="flex items-center">
         <div className="flex flex-1 items-center gap-6">
           <h2 className="whitespace-nowrap text-4xl font-extrabold text-foreground">
