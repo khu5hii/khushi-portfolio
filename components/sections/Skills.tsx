@@ -105,7 +105,7 @@ function GroupColumn({ group }: { group: SkillGroup }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="flex w-full justify-center mt-20">
+    <section id="skills" className="flex w-full justify-center mt-40">
       <div className="w-full max-w-5xl px-8 py-10">
         <div className="flex items-center gap-6">
           <h2 className="whitespace-nowrap text-4xl font-extrabold text-foreground">
