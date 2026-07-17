@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 type Experience = {
   role: string;
   company: string;
@@ -33,7 +35,13 @@ export default function Experience() {
           <div className="h-px flex-1 bg-border" />
         </div>
 
-        <div className="mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="mt-10"
+        >
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h3 className="text-2xl font-extrabold text-foreground">
               {experience.role} —{" "}
@@ -58,7 +66,7 @@ export default function Experience() {
           <p className="mt-4 text-xs uppercase tracking-widest text-text-secondary">
             {experience.tags.join(" · ")}
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
