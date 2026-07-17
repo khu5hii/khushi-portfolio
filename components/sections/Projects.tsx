@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 type Project = {
   name: string;
   description: string;
@@ -111,7 +113,13 @@ export default function Projects() {
         </a>
       </div>
 
-      <div className="mt-12 divide-y divide-border">
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="mt-12 divide-y divide-border"
+      >
         {projects.map((project) => (
           <div
             key={project.name}
@@ -155,9 +163,15 @@ export default function Projects() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mt-6">
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
+        className="mt-6"
+      >
         <div className="flex items-center gap-6">
           <h3 className="whitespace-nowrap text-sm font-semibold uppercase tracking-widest text-text-secondary">
             side projects
@@ -186,7 +200,7 @@ export default function Projects() {
             </li>
           ))}
         </ul>
-      </div>
+      </motion.div>
     </section>
   );
 }
