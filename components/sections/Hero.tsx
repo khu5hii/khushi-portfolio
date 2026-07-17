@@ -1,12 +1,23 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
-    <section id="hero" className="mx-auto flex min-h-[calc(90vh-100px)] max-w-7xl items-center justify-between px-8">
-      {/* photooooo */}
-      <div>
-      </div>
-      
-      <div className="max-w-3xl">
-        <h1 className="text-5xl  leading-tight text-foreground">
+    <section
+      id="hero"
+      className="mx-auto flex min-h-[calc(90vh-100px)] max-w-7xl items-center justify-between px-8"
+    >
+      <div></div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="max-w-3xl"
+      >
+        <h1 className="text-5xl leading-tight text-foreground">
           hi, <span className="text-primary font-extrabold">khushi</span> here.
         </h1>
 
@@ -31,7 +42,7 @@ export default function Hero() {
             Say hi!
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
