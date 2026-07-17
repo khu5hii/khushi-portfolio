@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const email = "khushipatil1377@gmail.com";
 
 export default function Contact() {
@@ -10,14 +12,19 @@ export default function Contact() {
           <h2 className="whitespace-nowrap text-4xl font-extrabold text-foreground">
             / contact
           </h2>
-
           <div className="h-px flex-1 bg-border" />
         </div>
 
-        <div className="mt-5 flex flex-wrap items-baseline justify-between gap-4">
+        <motion.div
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="mt-5 flex flex-wrap items-baseline justify-between gap-4"
+        >
           <p className="max-w-2xl text-lg leading-9 text-text-secondary">
-            Have a project in mind or just want to say hi? My inbox is
-            always open.
+            Have a project in mind or just want to say hi? My inbox is always
+            open.
           </p>
 
           <a
@@ -26,7 +33,7 @@ export default function Contact() {
           >
             {email}
           </a>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
