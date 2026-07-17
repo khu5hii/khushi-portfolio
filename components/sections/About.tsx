@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-5xl px-8 py-10">
@@ -5,11 +9,16 @@ export default function About() {
         <h2 className="whitespace-nowrap text-4xl font-extrabold text-foreground">
           / about me
         </h2>
-
         <div className="h-px flex-1 bg-border" />
       </div>
 
-      <div className="flex mt-5 justify-between gap-20">
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+        className="flex mt-5 justify-between gap-20"
+      >
         <div className="max-w-3xl">
           <p className="text-lg leading-9 text-text-secondary">
             I enjoy building modern web applications, exploring AI, and
@@ -34,7 +43,7 @@ export default function About() {
             className="h-70 w-95 rounded-2xl object-cover"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
