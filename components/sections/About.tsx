@@ -38,9 +38,9 @@ export default function About() {
 
         <div className="shrink-0">
           <img
-            src="https://placehold.co/380x480"
+            src="/profile.jpeg"
             alt="Profile"
-            className="h-70 w-95 rounded-2xl object-cover"
+            className="h-[300px] w-[380px] rounded-2xl object-cover"
           />
         </div>
       </motion.div>
