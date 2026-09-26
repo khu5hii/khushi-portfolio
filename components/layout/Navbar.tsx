@@ -66,7 +66,7 @@ export default function Navbar() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/khushi-patil-03944b385/"
+            href="https://www.linkedin.com/in/khushiipatil"
             target="_blank"
             rel="noopener noreferrer"
             className="transition-colors hover:text-primary-hover"
